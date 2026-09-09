@@ -1,0 +1,76 @@
+/* Floating nav shared by the Silk page and its Events subpage.
+
+   The header is sticky rather than fixed, so it keeps its 96px box in normal
+   flow and nothing below it ever shifts when the pill appears. Only the inner
+   wrapper changes shape; the header itself is a transparent band, so it passes
+   clicks through to whatever is scrolling underneath it. */
+.header{position:sticky;top:0;z-index:25;pointer-events:none}
+/* No transition here on purpose. Transitioning background/shadow meant the white
+   lingered for a beat when unpinning at the top of the page. The pinned state
+   arrives through the nav-drop animation instead, so both directions are instant
+   and only the entrance is animated. */
+.header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;pointer-events:auto;border:1px solid transparent}
+
+/* Spans the page's content width with the brand at one end and the links at the
+   other, rather than hugging its contents in the middle. */
+/* Raised, rather than flat-on-glass. Three things do the work: a faint top-to-bottom
+   gradient so the face reads as lit from above, a pair of insets that bevel the top
+   and bottom edges, and a ramp of five drop shadows from a tight contact shadow out
+   to a wide ambient one. Stacking them beats one big blur, which just looks smudged. */
+.nav-pinned .header-inner{width:100%;height:auto;gap:34px;padding:10px 12px 10px 28px;border-radius:18px;border-color:#ffffffd9;background:linear-gradient(180deg,#fffffff0,#edf3f8e8);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #17374912,0 1px 2px #17374912,0 3px 6px #17374910,0 8px 16px #17374914,0 18px 34px #17374916,0 34px 60px #17374910;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);animation:nav-drop .4s cubic-bezier(.22,1,.36,1)}
+@keyframes nav-drop{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+
+/* Shed the wordmark's school block and tighten the type so the pill stays small. */
+.nav-pinned .brand{gap:0}
+.nav-pinned .brand-school{display:none}
+.nav-pinned .brand-word{font-size:31px;letter-spacing:-2.5px}
+.nav-pinned .brand-dot{font-size:19px;margin-top:2px;letter-spacing:-1px}
+.nav-pinned .header nav{gap:28px}
+/* :not() keeps this off the CTA, whose own padding it would otherwise outrank,
+   squashing the button to 39px in the pinned state only. */
+.nav-pinned .header nav a:not(.nav-join){padding-block:6px}
+/* The CTA is filled rather than outlined, matching the primary button in the join
+   section, so it outranks the plain "Events" link instead of competing with it.
+   align-items:center is load-bearing: the ↗ glyph makes an 18px line box while the
+   label's is only 14px, so under the default stretch the label sat 4px high. */
+.header .nav-join{align-items:center;gap:12px;padding:8px 8px 8px 19px;border:0;border-radius:13px;background:linear-gradient(180deg,#1e4759,#173749);color:var(--paper);box-shadow:inset 0 1px 0 #ffffff2b,0 1px 2px #17374933,0 5px 14px #17374926;transition:background .25s ease,box-shadow .25s ease,transform .25s ease}
+/* styles.css turns nav links to --accent on hover, which on a filled button means
+   dark text on a dark face. Hold the light colour instead. */
+.header .nav-join:hover{color:var(--paper);transform:scale(.962) rotate(.75deg);box-shadow:inset 0 1px 0 #ffffff2b,0 1px 2px #17374929,0 3px 9px #1737491f}
+/* Matches the bar's own proportions; the shared 27px chip is too tall in here. */
+.header .nav-join span{width:24px;height:24px;border-radius:8px;font-size:12px}
+
+@media(max-width:700px){
+  /* Same ramp, shortened: a phone-width bar does not need 60px of ambient cast. */
+  .nav-pinned .header-inner{gap:16px;padding:8px 9px 8px 18px;border-radius:15px;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #17374912,0 1px 2px #17374912,0 3px 6px #17374912,0 8px 16px #17374914,0 16px 28px #17374910}
+  .nav-pinned .brand-word{font-size:26px;letter-spacing:-2px}
+  .nav-pinned .brand-dot{font-size:16px}
+  .nav-pinned .header nav{gap:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav-pinned .header-inner{animation:none}
+  .header .nav-join,.header .nav-join:hover{transition:none;transform:none}
+}
+
+/* A quieter shadow lets the floating header sit with the airy page. */
+.nav-pinned .header-inner{box-shadow:inset 0 1px 0 #fff,0 1px 3px #17374912,0 8px 22px #17374914}
+.header nav a[aria-current="page"]:not(.nav-join){text-decoration:underline;text-underline-offset:6px}
+@media(max-width:700px){
+  .header .brand-school{display:none}
+  .header .brand{gap:0}
+  .header nav{gap:16px}
+  .header nav>a:not(.nav-join){display:flex;align-items:center;min-height:44px;font-size:12px}
+  .header .nav-join{min-height:44px;padding:8px 8px 8px 14px;gap:10px}
+  .nav-pinned .header nav{gap:16px}
+  .nav-pinned .header-inner{gap:12px;padding-left:16px;box-shadow:inset 0 1px 0 #fff,0 1px 3px #17374912,0 6px 16px #17374912}
+  .footer>div{flex-wrap:wrap;gap:18px}
+}
+@media(max-width:380px){
+  .header nav,.nav-pinned .header nav{gap:10px}
+  .header .brand-word{font-size:34px;letter-spacing:-2.5px}
+  .header .brand-dot{font-size:20px}
+  .header .nav-join{padding-left:10px;gap:6px}
+  .nav-pinned .header-inner{padding-left:10px;gap:8px}
+  .nav-pinned .brand-word{font-size:26px;letter-spacing:-2px}
+  .nav-pinned .brand-dot{font-size:16px}
+}

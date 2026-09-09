@@ -1,0 +1,35 @@
+/* Shared button treatment for the Silk page and its subpages: a lit gradient face,
+   the ↗ in its own glassy chip, and a lift on hover. Corners are matched to the
+   floating nav bar by proportion rather than by value. */
+.button{gap:14px;padding:11px 11px 11px 23px;border-radius:16px;background:linear-gradient(180deg,#1e4759,#173749);box-shadow:inset 0 1px 0 #ffffff2b,0 1px 2px #17374933,0 6px 18px #17374926;transition:background .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease,color .25s ease}
+/* Hover presses the button in rather than lifting it: a slight shrink, the faintest
+   clockwise tip, and the shadow drawing in to match. The face colour holds. */
+/* styles.css sets .button:hover{background:var(--accent)}, which outranks the base
+   gradient, so the face has to be restated here to hold its colour. */
+.button:hover{background:linear-gradient(180deg,#1e4759,#173749);transform:scale(.962) rotate(.75deg);box-shadow:inset 0 1px 0 #ffffff2b,0 1px 2px #17374929,0 3px 9px #1737491f}
+
+/* The chip is lit and bevelled like the nav bar itself rather than a flat tint:
+   a gradient face, a highlight along the top edge, a shadow along the bottom. */
+.button span,.nav-join span{display:grid;place-items:center;width:27px;height:27px;border-radius:9px;background:linear-gradient(180deg,#ffffff3d,#ffffff12);box-shadow:inset 0 1px 0 #ffffff47,inset 0 -1px 0 #00000017,0 1px 2px #0000001c;font-size:13px;line-height:1;overflow:hidden;transition:background .25s ease,box-shadow .25s ease}
+.button:hover span,.nav-join:hover span{background:linear-gradient(180deg,#ffffff5e,#ffffff24);box-shadow:inset 0 1px 0 #ffffff63,inset 0 -1px 0 #0000001f,0 2px 5px #00000026}
+/* The chip holds still; only the arrow inside it travels. */
+.button span i,.nav-join span i{display:block;font-style:normal;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.button:hover span i,.nav-join:hover span i{transform:translate(2px,-2px)}
+/* Cancel the sitewide nudge, which would otherwise slide the whole chip. */
+.button:hover span,.nav-join:hover span{transform:none}
+
+/* Secondary action: a raised white face rather than an outline, so it sits in the
+   same lit family as the nav bar and never introduces a blue rule. */
+.button-ghost{border:0;color:var(--ink);background:linear-gradient(180deg,#ffffff,#eef4f8);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #1737490f,0 1px 2px #17374917,0 6px 18px #17374914}
+.button-ghost:hover{color:var(--ink);background:linear-gradient(180deg,#ffffff,#eef4f8);transform:scale(.962) rotate(.75deg);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #17374912,0 1px 2px #17374914,0 3px 9px #17374912}
+.button-ghost span{background:linear-gradient(180deg,#1737491c,#1737490a);box-shadow:inset 0 1px 0 #ffffffb3,inset 0 -1px 0 #0000000d,0 1px 2px #00000012}
+.button-ghost:hover span{background:linear-gradient(180deg,#17374926,#17374912);box-shadow:inset 0 1px 0 #ffffffcc,inset 0 -1px 0 #00000012,0 2px 4px #00000017}
+
+@media(max-width:700px){
+  .button{gap:11px;padding:9px 9px 9px 18px;border-radius:14px}
+  .button span{width:24px;height:24px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .button,.button:hover,.button-ghost,.button-ghost:hover,.nav-join:hover{transition:none;transform:none}
+  .button span i,.nav-join span i,.button:hover span i,.nav-join:hover span i{transition:none;transform:none}
+}

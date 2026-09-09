@@ -1,0 +1,65 @@
+.walker-rail{display:none}
+.motion-silk .walker-rail{display:block;min-width:0;position:relative}
+.walker-sticky{position:static;display:flex;flex-direction:column;justify-content:center}
+.walker-stage{height:min(360px,44svh);min-height:210px;position:relative;overflow:hidden}
+.walker-stage canvas{display:block;width:100%;height:100%}
+.walker-status{position:absolute;inset:auto 20px 30px;text-align:center;font-size:11px;color:var(--muted);line-height:1.6;background:#f0f5f9ed;padding:12px;border-radius:12px}
+.walker-status[hidden]{display:none}
+/* The counter and the per-chapter copy only mean anything alongside the pinned
+   timeline, so they stay out of the way of the plain numbers row. */
+.timeline-count,.stat-chapter{display:none}
+.stat-since{font-size:.29em;letter-spacing:0;color:var(--muted);white-space:nowrap}
+.motion-silk .impact-layout:not([data-reveal]) .stat-since{display:block;margin-top:10px}
+@media(max-width:700px){.motion-silk .impact-layout:not([data-reveal]) .stat-value{font-size:clamp(35px,11vw,50px)}.motion-silk .impact-layout:not([data-reveal]) .stat-label{font-size:10px}}
+/* The preview switcher and its blurb are hidden on Silk for now. Hidden rather
+   than removed: aire-motion.js still writes to .motion-description, and the links
+   still work when driven from script or reached with ?motion=. Delete this one
+   rule to bring the bar back. */
+.motion-silk .motion-picker{display:none}
+
+/* Everything below is gated behind data-reveal, which the script sets once it has
+   taken over. Without JavaScript, or with reduced motion, the attribute is absent
+   and the section falls back to the site's ordinary three-across numbers row with
+   the figure above it: nothing pinned, nothing translated, nothing hidden. */
+
+/* Shorter travel, with a readable hold for each of the three facts. */
+.motion-silk .impact-layout[data-reveal]{position:relative;height:220svh}
+.motion-silk .impact-layout[data-reveal] .impact-pin{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center}
+
+/* The figure holds the centre of the screen while the years slide past beneath,
+   so walking in place reads as walking forward through the timeline. */
+/* min-height:0 is load-bearing. A flex item defaults to min-height:auto, and the
+   canvas carries an intrinsic size from its width/height attributes, so without
+   this the canvas overrides flex-basis and the figure grows to swallow the pin. */
+.motion-silk .impact-layout[data-reveal] .walker-rail{flex:0 0 min(40svh,325px);width:100%;min-height:0;overflow:hidden}
+.motion-silk .impact-layout[data-reveal] .walker-sticky{height:100%;min-height:0;justify-content:flex-end}
+.motion-silk .impact-layout[data-reveal] .walker-stage{height:100%;min-height:0}
+
+/* Sized to its content rather than filling the pin, so the figure, the line and
+   the caption centre as one group instead of leaving a well of dead space below. */
+.motion-silk .impact-layout[data-reveal] .timeline{position:relative;flex:0 1 auto;min-height:0;overflow:hidden;padding-bottom:min(4svh,34px)}
+/* The line the figure walks along is also the progress bar: :before is the unwalked
+   track, :after the accent fill that follows the reader through the section. Drawn
+   4px inside the box rather than as a border so the markers can sit centred on it
+   without overflow:hidden clipping their top halves. */
+.motion-silk .impact-layout[data-reveal] .timeline:before{content:'';position:absolute;left:0;right:0;top:4px;height:2px;background:var(--line)}
+/* Scaling a fill beats animating width: it stays on the compositor and never
+   triggers layout while scrolling. */
+.motion-silk .impact-layout[data-reveal] .timeline:after{content:'';position:absolute;left:0;right:0;top:4px;height:2px;background:var(--accent);transform:scaleX(var(--progress,0));transform-origin:left center;will-change:transform}
+.motion-silk .impact-layout[data-reveal] .numbers{display:grid;height:auto;grid-template-columns:1fr;position:relative;z-index:1}
+.motion-silk .impact-layout[data-reveal] .stat{grid-area:1/1;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:0;border:0;opacity:var(--visibility,0);transform:translate3d(var(--offset,0px),0,0);will-change:opacity,transform}
+/* Each milestone's marker sits on that line, and passes under the figure's feet. */
+.motion-silk .impact-layout[data-reveal] .stat:before{content:'';width:10px;height:10px;border-radius:50%;background:var(--accent);transform:scale(.6);transition:transform .45s ease}
+.motion-silk .impact-layout[data-reveal] .stat.is-current:before{transform:scale(1)}
+.motion-silk .impact-layout[data-reveal] .stat-chapter{display:block;text-transform:uppercase;font-size:10px;letter-spacing:1.65px;color:var(--muted);margin-top:min(2.6svh,20px)}
+.motion-silk .impact-layout[data-reveal] .stat-value{font-size:clamp(56px,6.5vw,112px);line-height:1.05;margin-top:min(1.8svh,14px)}
+/* Sized in em so it tracks the figure at every breakpoint. */
+.motion-silk .impact-layout[data-reveal] .stat-since{font-size:.29em;letter-spacing:0;color:var(--muted);vertical-align:middle;margin-left:.16em;white-space:nowrap}
+.motion-silk .impact-layout[data-reveal] .stat-label{font-size:13px;line-height:1.6;margin-top:12px;max-width:340px}
+
+
+/* Sits just above the line, at the end the fill is travelling toward. */
+.motion-silk .impact-layout[data-reveal] .timeline-count{display:block;flex:0 0 auto;text-align:right;font-size:10px;letter-spacing:1.65px;color:var(--muted);font-variant-numeric:tabular-nums;margin-bottom:6px}
+
+@media(max-width:1000px){.motion-silk .impact-layout[data-reveal] .walker-rail{flex-basis:min(36svh,275px)}.motion-silk .impact-layout[data-reveal] .stat-value{font-size:clamp(50px,7.5vw,92px)}}
+@media(max-width:700px){.motion-silk .impact-layout[data-reveal]{height:210svh}.motion-silk .impact-layout[data-reveal] .walker-rail{flex-basis:min(28svh,205px)}.motion-silk .impact-layout[data-reveal] .stat-chapter{font-size:10px;letter-spacing:1.1px;margin-top:14px}.motion-silk .impact-layout[data-reveal] .stat-value{font-size:clamp(42px,13vw,72px);letter-spacing:-2px}.motion-silk .impact-layout[data-reveal] .stat-label{font-size:12px;margin-top:9px;max-width:250px}.motion-silk .impact-layout[data-reveal] .stat-symbol{font-size:24px;margin-top:10px}.motion-silk .impact-layout[data-reveal] .timeline-count{font-size:10px;letter-spacing:1.1px;margin-bottom:8px}.walker-status{inset:auto 4px 10px;font-size:9px;padding:6px}}

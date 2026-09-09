@@ -1,0 +1,19 @@
+{
+  "verifiedOn": "2026-09-07",
+  "source": "CHE public Google Calendar",
+  "note": "Snapshot for the next-meeting card; update when the calendar changes. The live calendar remains authoritative. No Fall 2026 general meeting locations were posted when checked.",
+  "meetings": [
+    { "start": "2026-09-10T01:00:00Z", "end": "2026-09-10T02:00:00Z", "title": "General meeting · Dr. Mark Diaz" },
+    { "start": "2026-09-17T01:00:00Z", "end": "2026-09-17T02:00:00Z", "title": "General meeting · Dr. Michael Alvarado" },
+    { "start": "2026-09-24T01:00:00Z", "end": "2026-09-24T02:00:00Z", "title": "General meeting" },
+    { "start": "2026-10-01T01:00:00Z", "end": "2026-10-01T02:00:00Z", "title": "General meeting" },
+    { "start": "2026-10-08T01:00:00Z", "end": "2026-10-08T02:00:00Z", "title": "General meeting" },
+    { "start": "2026-10-15T01:00:00Z", "end": "2026-10-15T02:00:00Z", "title": "General meeting · Dr. Alberto Romo Valenzuela" },
+    { "start": "2026-10-22T01:00:00Z", "end": "2026-10-22T02:00:00Z", "title": "General meeting" },
+    { "start": "2026-10-29T01:00:00Z", "end": "2026-10-29T02:00:00Z", "title": "General meeting · Paint mini pumpkins" },
+    { "start": "2026-11-05T02:00:00Z", "end": "2026-11-05T03:00:00Z", "title": "General meeting · Jimena Romano Silva + Research" },
+    { "start": "2026-11-12T02:00:00Z", "end": "2026-11-12T03:00:00Z", "title": "General meeting" },
+    { "start": "2026-11-19T02:00:00Z", "end": "2026-11-19T03:00:00Z", "title": "General meeting" },
+    { "start": "2026-11-26T02:00:00Z", "end": "2026-11-26T03:00:00Z", "title": "General meeting · Intern health presentations" }
+  ]
+}

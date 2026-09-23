@@ -10,9 +10,7 @@ that the requested program is the CHE Educational Scholarship.
 
 The first source mixes a Spring 2026 application deadline with older enrollment
 requirements. It must not be used as current eligibility or a current application
-link. Recent recipient names and award years were not verified online. The two
-recipient placeholders reflect the owner's report of two recent awards, not a
-verified list. The next cycle is tentative; no amount, deadline or eligibility is
+link. Recent recipient names and award years were not verified online. The two recipient placeholders represent a high school student and an undergraduate, as clarified by the owner. Neither was a CHE member. Their names and bios are fictional samples, labeled on the page; no award years are inferred. The next cycle is tentative; no amount, deadline or eligibility is
 promised. The campaign also discusses conference scholarships, a distinct context.
 
 ## Still needed from the board
@@ -34,3 +32,7 @@ promised. The campaign also discusses conference scholarships, a distinct contex
   the output `public/` must not already exist.
 - The full `build-aire-motion.js` generator also calls the new generator. The
   existing warning about unported direct edits still applies to full regeneration.
+
+## Sample profiles
+
+Board names, roles, and bios are fictional samples requested by the owner. Set `sampleProfiles` to false only after replacing all entries with the approved roster. Recipient samples are in `build-community-pages.js` and must be replaced with verified profiles before removing the sample labels.

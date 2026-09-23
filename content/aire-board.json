@@ -1,11 +1,41 @@
 {
-  "intro": "Meet the students helping CHE feel like home. Our board’s names, photos, and stories are on their way.",
+  "sampleProfiles": true,
   "members": [
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." },
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." },
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." },
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." },
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." },
-    { "name": "Name coming soon", "role": "Board member", "photo": null, "bio": "A little about this board member, their path into health, and what CHE means to them will be shared here." }
+    {
+      "name": "Katy",
+      "role": "Publicity Board Member",
+      "photo": null,
+      "bio": "hi! i'm katy, a second year at berkeley. i love finding new spots around campus and planning my next trip!"
+    },
+    {
+      "name": "Maya",
+      "role": "Co-President",
+      "photo": null,
+      "bio": "hi i'm maya! i'm a third year studying public health. usually looking for a good matcha or convincing my friends to go on a sunset walk."
+    },
+    {
+      "name": "Alex",
+      "role": "Treasurer",
+      "photo": null,
+      "bio": "hey! i'm alex, a second year. i love pickup soccer, trying new food, and making playlists that are way too long."
+    },
+    {
+      "name": "Sofia",
+      "role": "Community Outreach Chair",
+      "photo": null,
+      "bio": "hi! i'm sofia, a fourth year. i love baking for my friends and exploring the bay. always down for a beach day!"
+    },
+    {
+      "name": "Diego",
+      "role": "Scholarship Chair",
+      "photo": null,
+      "bio": "hey i'm diego! i'm a third year who loves hiking, cooking, and finding a new coffee spot. tell me your favorite place in berkeley!"
+    },
+    {
+      "name": "Camila",
+      "role": "Secretary",
+      "photo": null,
+      "bio": "hi! i'm camila, a second year. i love taking photos, going to concerts, and getting boba after class!"
+    }
   ]
 }

@@ -120,3 +120,4 @@ subpage({
 </div>`
 });
 console.log('Built Aire homepage and About, Events, and Join subpages.');
+require('./build-community-pages.js');

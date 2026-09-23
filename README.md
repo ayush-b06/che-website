@@ -2,7 +2,7 @@
 
 ## Current website: Silk / Aire
 
-The finished website has Home, About, Events, and Join pages, an eight-photo marquee, a cursor-responsive background, and a scroll-driven 3D character. No database or backend is required.
+The website has Home, About, Events, Scholarships, Our board, and Join pages, an eight-photo marquee, a cursor-responsive background, and a scroll-driven 3D character. No database or backend is required.
 
 ### Cloudflare Pages setup
 
@@ -19,6 +19,8 @@ Connect this GitHub repository using **Pages → Import an existing Git reposito
 The build packages the current rendered pages and required assets. Development files and old experiments are not published. No dependencies need installing for this build. Cloudflare publishes a new version after each push to `main`.
 
 ### Editing and updates
+
+- Scholarships and board: see [SCHOLARSHIP-NOTES.md](SCHOLARSHIP-NOTES.md). Edit board profiles in `content/aire-board.json`, then run `node designs/build-community-pages.js`. That command preserves existing page bodies and updates shared navigation. Scholarship copy is in that generator. Production packaging includes all six pages.
 
 - Current pages: `designs/aire-motion.html`, `aire-motion-about.html`, `aire-motion-events.html`, and `aire-motion-join.html`.
 - Edit rendered pages directly, or edit `designs/build-aire-motion.js` and run `node designs/build-aire-motion.js` to regenerate all four. Do not regenerate over unported direct edits.

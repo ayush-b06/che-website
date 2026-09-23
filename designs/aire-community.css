@@ -1,0 +1,89 @@
+/* The same pale blue, Instrument serif and soft surfaces as the Aire site. */
+.community-page{background:radial-gradient(ellipse 75% 500px at 80% 0,#dcebf080,transparent)}
+.community-page em{color:var(--accent)}
+.community-hero{padding-block:68px 64px}
+.community-intro{display:grid;grid-template-columns:1.5fr 1fr;align-items:end;gap:7%;margin-top:28px}
+.community-hero h1{font:clamp(60px,6.2vw,100px)/1.02 var(--display);letter-spacing:-2.5px}
+.community-lede{max-width:365px;padding-bottom:6px}
+.community-lede p,.community-prose p,.cycle-copy>p{font-size:15px;line-height:1.85;color:var(--muted)}
+.community-lede .text-link,.community-prose .text-link{margin-top:25px}
+.community-page h2{font:clamp(38px,4vw,62px)/1.06 var(--display);letter-spacing:-1px}
+.community-page section[id]{scroll-margin-top:110px}
+.scholarship-feature{display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden;border:1px solid #fff;border-radius:22px;background:#ffffff70;box-shadow:0 14px 40px #17374908}
+.scholarship-art{min-height:500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 30% 20%,#e5eff0,#c2d8df 65%,#abc7d2);display:flex;align-items:center;justify-content:center;flex-direction:column;isolation:isolate}
+.art-orbit{position:absolute;width:560px;height:300px;border:1px solid #557f9340;border-radius:50%;transform:rotate(-42deg);z-index:-1}
+.orbit-two{width:650px;height:390px;transform:rotate(-42deg)}
+.orbit-three{width:750px;height:490px;transform:rotate(-42deg)}
+.scholarship-seal{width:205px;height:205px;border-radius:50%;background:linear-gradient(140deg,#f5fbffeb,#c5dde8);border:1px solid #ffffffbf;box-shadow:inset 0 1px 2px #fff,0 24px 40px #17374920;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transform:rotate(-9deg);transition:transform .6s}
+.scholarship-seal span{font-size:9px;letter-spacing:2px}
+.scholarship-seal strong{font-size:86px;font-weight:400;line-height:1}
+.scholarship-art:hover .scholarship-seal{transform:rotate(0deg) translateY(-5px)}
+.scholarship-art>p{font:32px/1.1 var(--display);text-align:center;margin-top:32px}
+.cycle-copy{padding:48px;align-self:center}
+.status-label{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.2px;border:1px solid var(--line);border-radius:30px;padding:9px 12px}
+.status-label>span{width:6px;height:6px;border-radius:50%;background:#55798b}
+.cycle-copy h2{margin:25px 0 20px}
+.cycle-facts{margin:25px 0 28px;font-size:12px}
+.cycle-facts>div{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-block:14px}
+.cycle-facts dt{color:var(--muted)}
+.cycle-facts dd{margin:0;text-align:right}
+.cycle-copy .button{width:fit-content;gap:25px}
+.cycle-copy .cycle-note{font-size:11px;margin-top:14px;line-height:1.6}
+.scholarship-story{display:grid;grid-template-columns:1fr 1fr;gap:12%;padding-block:88px}
+.scholarship-story h2{margin-top:23px}
+.community-prose{padding-top:34px;max-width:490px}
+.community-prose p+p{margin-top:18px}
+.recipients-section{padding-block:45px 80px;border-top:1px solid var(--line)}
+.community-section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.community-section-heading h2{margin-top:16px}
+.community-section-heading>p{max-width:290px;font-size:13px;line-height:1.7;color:var(--muted)}
+.recipient-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.recipient-card{display:flex;align-items:center;gap:30px;border:1px solid var(--line);border-radius:16px;padding:32px;background:#ffffff35}
+.recipient-symbol{font:80px/1 var(--display);color:#64889c}
+.recipient-card h3{font:35px/1.12 var(--display);letter-spacing:-.5px;margin:14px 0}
+.recipient-card p:not(.eyebrow){font-size:12px;line-height:1.7;color:var(--muted);max-width:290px}
+.scholarship-faq{display:grid;grid-template-columns:1fr 1.3fr;gap:10%;padding-block:30px 100px}
+.scholarship-faq h2{margin-top:20px}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list details:first-child{border-top:1px solid var(--line)}
+.community-page summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:48px}
+.community-page summary::-webkit-details-marker{display:none}
+.community-page summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px}
+.community-page summary>span{font-size:22px;font-weight:400;transition:transform .2s}
+.community-page details[open]>summary>span{transform:rotate(45deg)}
+.faq-list summary{font-size:14px;padding:20px 0}
+.faq-list details>p{font-size:13px;line-height:1.8;color:var(--muted);padding:0 28px 23px 0}
+.faq-list a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.board-section{padding-bottom:80px}
+.board-section-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-block:24px 28px}
+.board-section-heading h2{font:24px/1.2 var(--display);letter-spacing:0}
+.board-section-heading p{font-size:11px;color:var(--muted)}
+.board-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 26px;align-items:start}
+.board-card{--portrait:#d5e4eb;--shape:#9cb9c8;--wash:#e9f2f5;--rx:0deg;--ry:0deg;--lift:0px;min-width:0;background:#f9fcfe;border:1px solid #fff;border-radius:17px;overflow:hidden;transform:perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift));transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 3px 10px #17374906}
+.board-card.tone-1{--portrait:#dce5df;--shape:#a8beb3;--wash:#f0f4e9}
+.board-card.tone-2{--portrait:#e7dfd8;--shape:#c6b5a5;--wash:#f5ede5}
+.board-card:focus-within{box-shadow:0 16px 35px #17374918}
+.board-portrait{height:auto;aspect-ratio:1.15;position:relative;overflow:hidden;background:var(--portrait)}
+.board-portrait>img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.portrait-placeholder{position:absolute;inset:0;background:radial-gradient(ellipse at 35% 20%,var(--wash),transparent 80%)}
+.portrait-ring{position:absolute;width:78%;aspect-ratio:1;border:1px solid #ffffffb0;border-radius:50%;left:11%;top:13%;box-shadow:0 0 0 22px #ffffff18,0 0 0 44px #ffffff18}
+.portrait-head{position:absolute;width:24%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#ffffff75,var(--shape));top:24%;left:38%;box-shadow:0 8px 20px #17374906}
+.portrait-body{position:absolute;left:20%;bottom:-17%;width:60%;height:66%;border-radius:48% 48% 0 0;background:linear-gradient(130deg,#ffffff75,var(--shape))}
+.portrait-star{position:absolute;right:13%;top:17%;font-size:38px;color:#ffffffbf;transition:transform .6s}
+.portrait-label{position:absolute;bottom:18px;left:18px;font-size:9px;letter-spacing:.6px;padding:8px 11px;border-radius:20px;background:#f9fcfeeb;color:var(--muted)}
+.portrait-index{position:absolute;top:18px;left:20px;font-size:10px;letter-spacing:1px;color:var(--ink)}
+.board-card-copy{padding:25px 24px 12px}
+.board-card-copy .eyebrow{font-size:9px}
+.board-card-copy h2{font:33px/1.1 var(--display);letter-spacing:-.5px;margin:12px 0 20px}
+.board-bio{border-top:1px solid var(--line)}
+.board-bio summary{font-size:11px;padding-block:6px}
+.board-bio>p{font-size:13px;line-height:1.8;color:var(--muted);padding-block:8px 18px}
+.community-invitation{border-top:1px solid var(--line);text-align:center;padding-block:65px 90px}
+.community-invitation h2{font-size:clamp(60px,6vw,90px);margin:24px 0}
+.community-invitation>p:not(.eyebrow){font-size:14px;line-height:1.8;color:var(--muted)}
+.community-actions{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;margin-top:28px}
+@media(hover:hover) and (pointer:fine){.board-card:hover{--lift:-6px;box-shadow:0 20px 40px #17374918}.board-card:hover .portrait-star{transform:rotate(75deg)}.board-card:hover .board-portrait>img{transform:scale(1.035)}}
+@media(max-width:1000px){.community-intro{grid-template-columns:1.4fr 1fr;gap:5%}.community-hero h1{font-size:65px}.cycle-copy{padding:30px}.scholarship-art{min-height:470px}.board-grid{gap:22px}.board-card-copy{padding:22px 18px 10px}.board-card-copy h2{font-size:28px}.recipient-card{padding:26px;gap:20px}.recipient-symbol{font-size:60px}}
+@media(max-width:760px){.community-hero{padding-block:38px 40px}.community-intro{grid-template-columns:1fr;gap:24px;margin-top:22px}.community-hero h1{font-size:clamp(45px,10vw,70px);letter-spacing:-1.3px}.community-lede{max-width:450px}.community-lede p,.community-prose p,.cycle-copy>p{font-size:14px}.community-page h2{font-size:40px}.scholarship-feature{grid-template-columns:1fr;border-radius:16px}.scholarship-art{min-height:320px}.scholarship-seal{width:165px;height:165px;gap:12px}.scholarship-seal strong{font-size:64px}.scholarship-seal span{font-size:8px}.scholarship-art>p{font-size:28px;margin-top:23px}.cycle-copy{padding:30px 24px}.scholarship-story{grid-template-columns:1fr;gap:24px;padding-block:50px}.community-prose{padding:0}.community-section-heading{display:block}.community-section-heading>p{margin-top:16px;max-width:none}.recipient-grid{grid-template-columns:1fr;gap:16px}.recipients-section{padding-block:35px 50px}.recipient-card h3{font-size:32px}.scholarship-faq{grid-template-columns:1fr;gap:30px;padding-block:10px 60px}.board-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.board-section{padding-bottom:48px}.board-section-heading h2{font-size:24px}.board-section-heading p{max-width:100px;line-height:1.5;text-align:right}.board-card-copy h2{font-size:28px}.board-bio summary{font-size:10px;gap:8px}.community-invitation{padding-block:48px 60px}.community-invitation h2{font-size:58px}}
+@media(max-width:480px){.board-grid{grid-template-columns:1fr;gap:26px}.board-portrait{aspect-ratio:1.2}.board-card-copy{padding:24px 24px 12px}.board-card-copy h2{font-size:34px}.board-bio summary{font-size:12px}.cycle-facts>div{font-size:11px}.cycle-copy .button{font-size:11px;gap:16px}.status-label{font-size:9px}.recipient-card{padding:25px 20px}.recipient-symbol{font-size:52px}}
+@media(prefers-reduced-motion:reduce){.board-card,.scholarship-seal,.portrait-star,.board-portrait>img{transform:none!important;transition:none!important}}

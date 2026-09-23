@@ -12,6 +12,11 @@
 !/designs/aire-motion-about.html
 !/designs/aire-motion-events.html
 !/designs/aire-motion-join.html
+!/designs/aire-motion-scholarships.html
+!/designs/aire-motion-board.html
+!/designs/build-community-pages.js
+!/designs/aire-community.css
+!/designs/aire-board.js
 !/designs/build-aire-motion.js
 !/designs/AIRE-MOTION.md
 !/designs/styles.css
@@ -29,6 +34,8 @@
 !/content/
 /content/*
 !/content/aire-meetings.json
+!/content/aire-board.json
+!/SCHOLARSHIP-NOTES.md
 !/assets/
 /assets/*
 !/assets/fonts/
@@ -46,6 +53,8 @@
 !/assets/img/photos/
 /assets/img/photos/*
 !/assets/img/photos/che-*.jpg
+!/assets/img/photos/che-*.png
+!/assets/img/photos/che-*.webp
 !/assets/img/marquee/
 /assets/img/marquee/*
 !/assets/img/marquee/che-*.jpg

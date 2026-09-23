@@ -13,13 +13,13 @@ In Cloudflare choose Workers & Pages → Create application → Pages → Import
 - Root directory: leave blank
 - Environment variables: none required
 
-Choose Save and Deploy. Pushes to `main` trigger future deployments to the same project-level URL. Local edits alone do not publish anything. The production build includes the entire finished four-page site, does not add the temporary preview's noindex directive, and excludes development files. It needs Node but no npm packages.
+Choose Save and Deploy. Pushes to `main` trigger future deployments to the same project-level URL. Local edits alone do not publish anything. The production build includes the entire six-page site, does not add the temporary preview's noindex directive, and excludes development files. It needs Node but no npm packages.
 
 Official setup: https://developers.cloudflare.com/pages/get-started/git-integration/
 
 ## Optional drag-and-drop copy
 
-Run `node package-preview.js` from this project to create a fresh `che-preview-upload-*` folder. It packages the current rendered Silk homepage and About, Events, and Join pages, with their required assets only. It does not regenerate or edit the working designs. If you edit the template builder, regenerate the pages first; if you edit the rendered pages directly, package them as-is.
+Run `node package-preview.js` from this project to create a fresh `che-preview-upload-*` folder. It packages the current rendered Silk homepage and About, Events, Scholarships, Our board, and Join pages, with their required assets only. It does not regenerate or edit the working designs. If you edit the template builder, regenerate the pages first; if you edit the rendered pages directly, package them as-is.
 
 The output has `index.html` at its top level, corrected local links, the eight-photo marquee, fonts, and the bundled walking character. Old design galleries, dependencies, and unrelated files are excluded. Each run creates a new folder, preserving earlier packages. Never edit the upload copy as your main source.
 

@@ -47,6 +47,28 @@
   .nav-pinned .brand-dot{font-size:16px}
   .nav-pinned .header nav{gap:14px}
 }
+
+/* Six-page navigation. The full list remains visible when JavaScript is off. */
+.nav-toggle{display:none}
+@media(min-width:901px){.header nav,.nav-pinned .header nav{gap:24px}}
+@media(max-width:900px){
+  .header .brand-school{display:none}
+  .header .brand{gap:0}
+  .header-inner{position:relative;flex-wrap:wrap;gap:10px}
+  .header{height:auto;min-height:86px;padding-block:12px}
+  .header nav{width:100%;flex-wrap:wrap;justify-content:flex-start;gap:12px 22px;padding:10px 0}
+  .header nav>a:not(.nav-join){display:flex;align-items:center;min-height:44px;font-size:13px}
+  .nav-enhanced .header-inner{flex-wrap:nowrap;min-height:58px}
+  .nav-enhanced .nav-toggle{display:flex;align-items:center;justify-content:center;gap:18px;min-height:44px;padding:10px 16px;border:1px solid var(--line);background:#f9fcfe;border-radius:12px;font-size:12px;margin-left:auto}
+  .nav-toggle span{font-size:19px;transition:transform .2s}
+  .nav-toggle[aria-expanded="true"] span{transform:rotate(45deg)}
+  .nav-enhanced .header nav{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;width:auto;padding:14px;background:#f6fafd;border:1px solid #fff;border-radius:16px;box-shadow:0 16px 40px #17374920;gap:4px}
+  .nav-enhanced.nav-open .header nav{display:flex;flex-direction:column;align-items:stretch}
+  .nav-enhanced .header nav>a:not(.nav-join){padding:12px 14px;font-size:14px;border-radius:8px}
+  .nav-enhanced .header nav>a:not(.nav-join):hover{background:#e3edf3}
+  .nav-enhanced .header .nav-join{margin-top:6px;justify-content:space-between}
+  .nav-pinned .header-inner{gap:12px;padding:8px 10px 8px 18px}
+}
 @media(prefers-reduced-motion:reduce){
   .nav-pinned .header-inner{animation:none}
   .header .nav-join,.header .nav-join:hover{transition:none;transform:none}

@@ -11,7 +11,9 @@ const pages = {
   'aire-motion.html': 'index.html',
   'aire-motion-about.html': 'about.html',
   'aire-motion-events.html': 'events.html',
-  'aire-motion-join.html': 'join.html'
+  'aire-motion-join.html': 'join.html',
+  'aire-motion-scholarships.html': 'scholarships.html',
+  'aire-motion-board.html': 'board.html'
 };
 const files = new Map();
 function add(name, data) {
